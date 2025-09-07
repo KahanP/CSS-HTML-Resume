@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  background-color: rgb(228, 241, 243);
+  }
+
+/****************   Nav Section **********************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	background-color: rgb(11, 117, 187);
+  border-bottom: 4px solid #095a90;
+  color: white;
+  padding: 0px 20px;
+  font-size: 18px;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+}
+
+/***********************  Footer Section   **************************/
+footer {
+	display: flex;
+  justify-content: center;
+  background-color: rgb(184, 182, 182);
+  border-top: 4px solid rgb(170, 170, 170); 
+
+}
+  
+
+/*********** Splash Page ************************/
+header {
+display: flex;
+flex-direction: column-reverse;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+gap: 0px;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: #0bbbbb;
+  color: white;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 0px 35px;
+  font-size: 40px;
+  font-family: "Comic Sans MS", sans-serif;
+  
+}
+
+header img {
+  border: 8px solid rgb(11, 117, 187);
+  border-radius: 8px;
+}
+
+.address {
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: 18px;
+}
+
+.tagline {
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: 18px;
+}
+
+/************* Sections ********************/
+hr {
+  border: none;
+  height: 4px;
+  background-color: #0bbbb8;
+  margin: 20px 0;
+  border-radius: 2px;
+}
+
+section h3 {
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #0bbbbb;
+  color: white;
+  font-family: "comic sans ms", sans-serif;
+  font-size: 24px;
+  border-radius: 8px;
+  padding: 2px 10px;
+}
+
+section dl {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 0px;
+
+  background-color: rgb(183, 218, 224);
+  width: fit-content;
+  padding: 15px 30px;
+  border-radius: 8px;
+  margin-left: 30px;
+  margin-top: 0px;
+}
+
+section ul {
+  display: block;
+  background-color: rgb(183, 218, 224);
+  width: fit-content;
+  padding: 15px 40px;
+  border-radius: 8px;
+  margin-left: 30px;
+  margin-top: 0px;
+  list-style-type: square;
+}
+
+section a {
+  text-decoration: none;
+  color: black; 
+}
+
+section a:hover {
+  text-decoration: underline;
+  color: rgb(11, 117, 187);
+}
+
+/**************   Projects   *****************/
+.three-col {
+	display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10px 20px;
+  gap: 20px;
+
+
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(183, 218, 224);
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: 2px solid rgb(11, 117, 187);
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 10px 20px;
+      gap: 20px;
+    }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  gap: 10px;
+  background-color: rgb(183, 218, 224);
+  padding: 15px 20px;
+  width: 80%;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgb(11, 117, 187);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  background-color: aliceblue;
+  font-family: "times new roman", Times, serif;
+}
+
+input[type="submit"] {
+  background-color: rgb(11, 117, 187);
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  width: 20%;
+  margin: 0 auto;
+}
+input[type="submit"]:hover {
+  background-color: rgb(8, 90, 144);
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgb(11, 117, 187);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  background-color: aliceblue;
+  font-family: "times new roman", Times, serif;
+  font-size: 16px;
+
+}
