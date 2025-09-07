@@ -15,18 +15,24 @@
     <header>
         <h1>Kahan Patel</h1>
         <img src="images/kp_headshot.jpg" width="200" height="250" alt="Kahan Patel Headshot">
+        <p class="address">1108 Woodtrace Lane, Auburn, GA 30011 &#9635;  p(678) 308-3297 &#9635; kpp18676@uga.edu</p>
+        <p class="tagline">I am a Computer Science student at the Univesity of Georgia who likes to build cool things on the web!</p>
     </header>
-      <p class="address">1108 Woodtrace Lane, Auburn, GA 30011 &#9635;  p(678) 308-3297 &#9635; kpp18676@uga.edu</p>
-
-      <p class="tagline">I am a Computer Science student at the Univesity of Georgia who likes to build cool things on the web!</p>
+      
   
     <hr>
     <section>  
         <h3>Education</h3>
         <dl>
-            <dt>University of Georgia</dt>
+            <dt>University of Georgia
+                <p>&emsp;&emsp;Athens, GA</p>
+            </dt>
                 <dd>GPA: 3.4</dd>
-            <dt>Bachelors of Science</dt>
+            <dt>Bachelors of Science
+                <p>&emsp;&emsp;Major: Computer Science</p>
+                <p>&emsp;&emsp;Minor: Business</p>
+            </dt>
+
                 <dd>May 2027</dd>
         </dl>
     </section>
@@ -48,7 +54,8 @@
             <li>React</li>
             <li>C/C++</li>
             <li>Python</li>
-            <li>RESTful APIs</li>
+            <li>Implementing RESTful APIs</li>
+            <li>Software Development: Scrum, Waterfall, Agile</li>
         </ul>
     </section>
     <section>
@@ -101,5 +108,22 @@
         </p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+    VANTA.GLOBE({
+    el: "header",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x0b75bb,
+    backgroundColor: 0x303639,
+    size: 2
+    });
+    </script>
 </body>
 </html>
