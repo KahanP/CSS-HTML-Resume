@@ -14,7 +14,6 @@ nav {
   color: white;
   padding: 0px 20px;
   font-size: 18px;
-
 }
 
 nav a {
@@ -48,6 +47,7 @@ header {
   padding-top: 15px;
   min-height: auto;
   overflow: hidden;
+  gap: 10px;
 }
 
 header > canvas {
@@ -77,7 +77,9 @@ header h1 {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  background-color: #0bbbbb;
+  background: linear-gradient(90deg, #0b75bb, #0bbbbb, #0b75bb);
+  background-size: 200% 100%;
+  animation: glow 3s linear infinite;
   color: white;
   border-radius: 8px;
   width: fit-content;
@@ -88,7 +90,7 @@ header h1 {
 }
 
 header img {
-  border: 8px solid rgb(11, 117, 187);
+  border: 8px outset rgb(11, 117, 187);
   border-radius: 8px;
 }
 
@@ -121,7 +123,7 @@ color: white;
 }
 /************* Sections ********************/
 hr {
-    border: none;
+  border: none;
   height: 4px;
   background: linear-gradient(90deg, #0b75bb, #0bbbbb, #0b75bb);
   background-size: 200% 100%;
@@ -137,13 +139,15 @@ hr {
 
 section h3 {
   display: inline-block;
-  margin-left: 10px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
   background-color: #0bbbbb;
   color: white;
   font-family: "comic sans ms", sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   border-radius: 8px;
-  padding: 2px 10px;
+  padding: 8px 10px;
+  margin-left: 18px;
 }
 
 section dl {
@@ -159,23 +163,45 @@ section dl {
   margin-left: 30px;
   margin-right: 30px;
   margin-top: 0px;
+  font: "times new roman", Times, serif;
+  font-size: 18px;
+}
+
+dl a:link {
+  text-decoration: none;
+  color: #095a90; 
+}
+
+dl a:hover {
+  text-decoration: underline;
+  color: rgb(11, 117, 187);
 }
 
 section dl dd {
   justify-self: end;  /* pushes to far right within box */
   text-align: right;
+  font: "times new roman", Times, serif;
+  font-size: 22px;
 }
 
 section ul {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px 50px;
   background-color: rgb(183, 218, 224);
   width: auto;
   padding: 15px 40px;
   border-radius: 8px;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 0px;
+  margin: 0 30px;
   list-style-type: square;
+  align-items: center;
+  font: "times new roman", Times, serif;
+  font-size: 18px;
+}
+#skills ul{
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 section a {
@@ -199,7 +225,7 @@ section a:hover {
 }
 
 .card img {
-  max-width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -212,10 +238,21 @@ section a:hover {
   background-color: rgb(183, 218, 224);
   flex-direction: column;
   align-items: center;
-  width: 95%;
+  width: 80%;
+  margin: 0 auto;
   padding: 10px 10px;
   border-radius: 8px;
   border: 2px solid rgb(11, 117, 187);
+  box-shadow: 0 4px 10px rgb(58, 158, 230);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font: "times new roman", Times, serif;
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: scale(1.10); /* makes it “zoom” 5% bigger */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8); /* stronger shadow */
+  z-index: 1; /* brings it above neighbors in a grid */
 }
 
 /**************   Responsiveness   *****************/
@@ -233,6 +270,9 @@ section a:hover {
       grid-template-columns: 1fr;
       margin: 10px 20px;
       gap: 20px;
+    }
+    .card {
+      width: 95%;
     }
 }
 
@@ -273,9 +313,13 @@ input[type="submit"] {
   font-size: 20px;
   width: 20%;
   margin: 0 auto;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 input[type="submit"]:hover {
   background-color: rgb(8, 90, 144);
+   transform: scale(1.05); /* makes it “zoom” 5% bigger */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8); /* stronger shadow */
+  z-index: 1; /* brings it above neighbors in a grid */
 }
 
 textarea {
